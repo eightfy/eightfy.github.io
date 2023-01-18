@@ -1,0 +1,17 @@
+{
+  "ver":1.0,
+  "se":{
+    "25":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/saki/act_pon.mp3"},
+    "26":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/hibiki/act_pon.mp3"},
+    "27":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/saki/act_kan.mp3"},
+    "28":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/hibiki/act_kan.mp3"},
+    "29":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/saki/act_chi.mp3"},
+    "30":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/hibiki/act_chi.mp3"},
+    "31":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/saki/act_rich.mp3"},
+    "32":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/hibiki/act_rich.mp3"},
+    "33":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/saki/act_ron.mp3"},
+    "34":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/hibiki/act_ron.mp3"},
+    "35":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/saki/act_tumo.mp3"},
+    "36":{"url":"https://jsd.cdn.zzko.cn/gh/eightfy/tenhou@main/mahjong/SE_Saki/hibiki/act_tumo.mp3"},
+  }
+}
