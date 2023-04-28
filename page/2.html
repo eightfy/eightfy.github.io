@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Markdown to HTML with Code Highlighting</title>
+    
+    <!-- 引入 marked.js 库 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+
+    <!-- 引入 highlight.js 库 -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+
+  <body>
+    <div id="content"></div>
+
+    <script>
+      const files = [
+        '../mdfile/1.md',
+        '../mdfile/1.md',
+        '../mdfile/1.md'
+      ];
+
+      const getContent = async (file) => {
+        const response = await fetch(file);
+        const text = await response.text();
+        return text;
+      };
+
+      const renderContent = async () => {
+        let htmlText = '';
+        for (const file of files) {
+          const markdownText = await getContent(file);
+          const convertedText = marked(markdownText);
+          htmlText += convertedText;
+        }
+        document.getElementById('content').innerHTML = htmlText;
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      };
+
+      renderContent();
+    </script>
+  </body>
+</html>
