@@ -5,7 +5,7 @@ async function saveContent() {
       const url = `https://api.github.com/repositories/590278809/contents/mdfile/log.md`;
       const baseUrlResponse = await fetch(url, {
         headers: {
-          'Authorization': `token ${token}`,  // 替换为您自己的访问令牌
+          'Authorization': `token ${{token}}`,  // 替换为您自己的访问令牌
           'Accept': 'application/vnd.github.v3+json'
         }
       });
