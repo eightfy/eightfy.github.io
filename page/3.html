@@ -2,24 +2,11 @@
     <html>
       <head>
         <title>Markdown with MathJax</title>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- 引入 MathJax 以呈现数学公式 -->
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script>window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']], processEscapes: true } };</script>
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-        
         <!-- 引入 marked.js 和 markdown-it -->
         <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
-        <!-- 引入 highlight.js 库 -->
-        <script src="/assets/js/highlight/highlight.min.js"></script>
-        <script src="/assets/js/highlightjs-line-numbers.min.js"></script>
         <link href="/assets/css/code.css" type="text/css" rel="stylesheet" />
-        <script>hljs.highlightAll();</script>
-        <script>hljs.initLineNumbersOnLoad();</script>
         <script src="/assets/js/fun.js"></script>
-
-
     </head>
     
       <body>
@@ -29,10 +16,11 @@
           <input type="text" id="token" name="token"><br>
           <button type="button" onclick="saveContent()">保存到Markdown文件</button>
         </form>
-        <div id="content"></div>
-    
+        <div id="mdcon"></div>
         <script>
-          const files = ['../mdfile/log.md'];
+          const files = [
+            '../mdfile/log.md'
+        ];
           const getContent = async (file) => {
             const response = await fetch(file);
             const text = await response.text();
@@ -52,12 +40,7 @@
               const renderedMarkdown = md.render(markdownText);
               htmlText += renderedMarkdown;
             }
-            document.getElementById('content').innerHTML = htmlText;
-            MathJax.Hub.Queue(['Typeset', MathJax.Hub]); // 手动渲染数学公式
-            document.querySelectorAll('pre code').forEach((block) => {
-              hljs.highlightElement(block);
-              hljs.lineNumbersBlock(block);
-            });
+            document.getElementById('mdcon').innerHTML = htmlText;
           };
           renderContent();
         </script>
