@@ -51,32 +51,3 @@ async function saveContent() {
     }
   }
   
-  const files = [
-    '../mdfile/log.md',
-  ];
-  const getContent = async (file) => {
-    const response = await fetch(file);
-    const text = await response.text();
-    return text;
-  };
-  const renderContent = async () => {
-    let htmlText = '';
-    for (const file of files) {
-      const markdownText = await getContent(file);
-      const md = window.markdownit({
-        html: true, // 允许渲染 HTML 标记
-        breaks: true, // 允许行内换行符
-        linkify: true, // 将 URL 自动转换为链接
-        typographer: true, // 将普通的引号转换为弯引号等
-        quotes: '“”‘’',
-      });
-      const renderedMarkdown = md.render(markdownText);
-      htmlText += renderedMarkdown;
-    }
-    document.getElementById('content').innerHTML = htmlText;
-    MathJax.Hub.Queue(['Typeset', MathJax.Hub]); // 手动渲染数学公式
-    document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightElement(block);
-      hljs.lineNumbersBlock(block);
-    });
-  };
