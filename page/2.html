@@ -1,48 +1,60 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Markdown to HTML with Code Highlighting</title>
+    <html>
+      <head>
+        <title>Markdown with MathJax</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- 引入 MathJax 以呈现数学公式 -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script>window.MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']], processEscapes: true } };</script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        
+        <!-- 引入 marked.js 和 markdown-it -->
+        <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+        <!-- 引入 highlight.js 库 -->
+        <script src="/assets/js/highlight/highlight.min.js"></script>
+        <script src="/assets/js/highlightjs-line-numbers.min.js"></script>
+        <link href="/assets/css/code.css" type="text/css" rel="stylesheet" />
+        <script>hljs.highlightAll();</script>
+        <script>hljs.initLineNumbersOnLoad();</script>
+    </head>
     
-    <!-- 引入 marked.js 库 -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
-
-    <!-- 引入 highlight.js 库 -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-  </head>
-
-  <body>
-    <div id="content"></div>
-
-    <script>
-      const files = [
-        '../mdfile/1.md',
-        '../mdfile/1.md',
-        '../mdfile/1.md'
-      ];
-
-      const getContent = async (file) => {
-        const response = await fetch(file);
-        const text = await response.text();
-        return text;
-      };
-
-      const renderContent = async () => {
-        let htmlText = '';
-        for (const file of files) {
-          const markdownText = await getContent(file);
-          const convertedText = marked(markdownText);
-          htmlText += convertedText;
-        }
-        document.getElementById('content').innerHTML = htmlText;
-        document.querySelectorAll('pre code').forEach((block) => {
-          hljs.highlightBlock(block);
-        });
-      };
-
-      renderContent();
-    </script>
-  </body>
-</html>
+      <body>
+        <div id="content"></div>
+    
+        <script>
+          const files = [
+            '../mdfile/2.md',
+            '../mdfile/1.md',
+          ];
+          const getContent = async (file) => {
+            const response = await fetch(file);
+            const text = await response.text();
+            return text;
+          };
+          const renderContent = async () => {
+            let htmlText = '';
+            for (const file of files) {
+              const markdownText = await getContent(file);
+              const md = window.markdownit({
+                html: true, // 允许渲染 HTML 标记
+                breaks: true, // 允许行内换行符
+                linkify: true, // 将 URL 自动转换为链接
+                typographer: true, // 将普通的引号转换为弯引号等
+                quotes: '“”‘’',
+              });
+              const renderedMarkdown = md.render(markdownText);
+              htmlText += renderedMarkdown;
+            }
+            document.getElementById('content').innerHTML = htmlText;
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub]); // 手动渲染数学公式
+            document.querySelectorAll('pre code').forEach((block) => {
+              hljs.highlightElement(block);
+              hljs.lineNumbersBlock(block);
+            });
+          };
+          renderContent();
+        </script>
+      </body>
+    </html>
+    

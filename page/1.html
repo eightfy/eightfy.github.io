@@ -14,7 +14,12 @@
         <!-- 引入 highlight.js 库 -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+
         <script>hljs.initHighlightingOnLoad();</script>
+        <script>hljs.initLineNumbersOnLoad();</script>
+
     </head>
     
       <body>
@@ -51,6 +56,7 @@
             MathJax.Hub.Queue(['Typeset', MathJax.Hub]); // 手动渲染数学公式
             document.querySelectorAll('pre code').forEach((block) => {
                 hljs.highlightBlock(block);
+                hljs.lineNumbersBlock(block);
             });
         };
         renderContent();
