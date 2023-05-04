@@ -1,0 +1,7 @@
+name: My Workflow
+on:
+  push:
+    branches:
+      - main
+env:
+  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}

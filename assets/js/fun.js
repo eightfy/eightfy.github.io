@@ -4,7 +4,7 @@ async function saveContent() {
       const url = `https://api.github.com/repositories/590278809/contents/mdfile/log.md`;
       const baseUrlResponse = await fetch(url, {
         headers: {
-          'Authorization': `token ${secrets.ACCESS_TOKEN}`,  // 替换为您自己的访问令牌
+          'Authorization': `token ${{env.ACCESS_TOKEN}}`,  // 替换为您自己的访问令牌
           'Accept': 'application/vnd.github.v3+json'
         }
       });
@@ -18,7 +18,7 @@ async function saveContent() {
       const day = ('0' + today.getDate()).slice(-2);
       const shaResponse = await fetch(url, {
         headers: {
-          'Authorization': `token ${secrets.ACCESS_TOKEN}`,  // 替换为您自己的访问令牌
+          'Authorization': `token ${{env.ACCESS_TOKEN}}`,  // 替换为您自己的访问令牌
           'Accept': 'application/vnd.github.v3+json'
         }
       });
@@ -37,7 +37,7 @@ async function saveContent() {
       const response = await fetch(url, {
         method: 'PUT',
         headers: {
-          'Authorization': `token ${secrets.ACCESS_TOKEN}`,  // 替换为您自己的访问令牌
+          'Authorization': `token ${{env.ACCESS_TOKEN}}`,  // 替换为您自己的访问令牌
           'Accept': 'application/vnd.github.v3+json'
         },
         body: JSON.stringify(data)
