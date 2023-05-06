@@ -6,16 +6,23 @@
         <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
         <link href="/assets/css/code.css" type="text/css" rel="stylesheet" />
+        <link href="/assets/css/diary.css" type="text/css" rel="stylesheet" />
         <script src="/assets/js/fun.js"></script>
     </head>
     
       <body>
         <form>
-          <label for="content">输入内容:</label><br>
-          <input type="text" id="content" name="content"><br>
-          <input type="text" id="token" name="token"><br>
-          <button type="button" onclick="saveContent()">保存到Markdown文件</button>
+          <div">
+            <label for="content" class="mb-2">Any RUBBISH that I want to DUMP:</label>
+            <textarea id="content" name="content" class="form-control border" rows="5" ></textarea>
+          </div>
+          <div class="form-group mb-3 d-flex justify-content-center align-items-center">
+            <label for="token" class="mb-2">Token:</label>
+            <input type="password" id="token" name="token" class="form-control border">
+            <button type="button" onclick="saveContent()" class="btn btn-primary rounded-pill px-4 py-2">今日份的垃圾！</button>
+          </div>
         </form>
+        
         <div id="mdcon"></div>
         <script>
           const files = [

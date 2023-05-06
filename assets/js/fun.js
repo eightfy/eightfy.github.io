@@ -3,8 +3,9 @@ async function saveContent() {
       let token = `token `;
       token += document.getElementById("token").value;
       // 获取GitHub仓库的API根据URL
-      const url = `https://api.github.com/repositories/590278809/contents/mdfile/log.md`;
-
+      const url = `https://api.github.com/repositories/590278809/contents/mdfile/log.md?ref=test`;
+      //const urltest = `https://api.github.com/repos/eightfy/eightfy.github.io/contents/mdfile/log.md?ref=test`;
+      
       // 获取文件的SHA值
       const today = new Date();
       const year = today.getFullYear();
@@ -45,4 +46,3 @@ async function saveContent() {
       console.error(error);
     }
   }
-  
