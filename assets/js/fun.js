@@ -4,15 +4,7 @@ async function saveContent() {
       token += document.getElementById("token").value;
       // 获取GitHub仓库的API根据URL
       const url = `https://api.github.com/repositories/590278809/contents/mdfile/log.md`;
-      const baseUrlResponse = await fetch(url, {
-        headers: {
-          'Authorization': token,  // 替换为您自己的访问令牌
-          'Accept': 'application/vnd.github.v3+json'
-        }
-      });
-      const baseUrlData = await baseUrlResponse.json();
-      const baseApiUrl = baseUrlData.url;
-  
+
       // 获取文件的SHA值
       const today = new Date();
       const year = today.getFullYear();
@@ -27,13 +19,16 @@ async function saveContent() {
       const shaData = await shaResponse.json();
       const sha = shaData.sha;
       const contentStr = atob(shaData.content);
-  
       // 更新文件
       const message = `Add new content on ${year}-${month}-${day}`;
-      const content = `${year}-${month}-${day}` + `\n\n> ` + document.getElementById("content").value + `\n\n` + contentStr;
+      const content = `${year}-${month}-${day}\n\n> ${document.getElementById("content").value}\n\n${contentStr}`;
+      const textEncoder = new TextEncoder();
+      const encodedContent = textEncoder.encode(content);
+      const base64Content = btoa(String.fromCharCode(...new Uint8Array(encodedContent)));
+      console.log(encodedContent);
       const data = {
         message: message,
-        content: btoa(content),
+        content: base64Content,
         sha: sha
       };
       const response = await fetch(url, {
