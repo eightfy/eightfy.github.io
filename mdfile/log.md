@@ -1,13 +1,14 @@
-Sun, 05-07-2023, 23:49 GMT+8
+Sun, 05-07-2023, 23:58 GMT+8
 
-> 初听アイドル还没太多感觉，只是中间那段调调听着安心，加入了每日歌单中。这几天就这mv听了一遍，突然就和歌曲狠狠共情了，循环播放！好喜欢星野爱啊，初见可爱单推——
-[](../assets/img/20230507_1.png)
+> 图片还是加载不出来呢呜呜。。。
 
-2023-05-06
-
-> 中文测试 **chinese**
-
-2023-05-04
-
-> Only support en, tomorrow try zh!   [](./assets/img/qi.gif)
-# 由此开始
+U3VuLCAwNS0wNy0yMDIzLCAyMzo0OSBHTVQrOAoKPiDliJ3lkKzjgqLjgqTj
+g4njg6vov5jmsqHlpKrlpJrmhJ/op4nvvIzlj6rmmK/kuK3pl7TpgqPmrrXo
+sIPosIPlkKznnYDlronlv4PvvIzliqDlhaXkuobmr4/ml6XmrYzljZXkuK3j
+gILov5nlh6DlpKnlsLHov5ltduWQrOS6huS4gOmBje+8jOeqgeeEtuWwseWS
+jOatjOabsueLoOeLoOWFseaDheS6hu+8jOW+queOr+aSreaUvu+8geWlveWW
+nOasouaYn+mHjueIseWViu+8jOWIneingeWPr+eIseWNleaOqOKAlOKAlApb
+XSguLi9hc3NldHMvaW1nLzIwMjMwNTA3XzEucG5nKQoKMjAyMy0wNS0wNgoK
+PiDkuK3mlofmtYvor5UgKipjaGluZXNlKioKCjIwMjMtMDUtMDQKCj4gT25s
+eSBzdXBwb3J0IGVuLCB0b21vcnJvdyB0cnkgemghICAgW10oLi9hc3NldHMv
+aW1nL3FpLmdpZikKIyDnlLHmraTlvIDlp4sK
