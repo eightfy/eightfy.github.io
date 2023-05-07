@@ -19,7 +19,7 @@ async function saveContent() {
       });
       const shaData = await shaResponse.json();
       const sha = shaData.sha;
-      const contentStr = atob(shaData.content);
+      const contentStr = shaData.content;
       // 更新文件
       const message = `Add new content on ${year}-${month}-${day}`;
       //获得时间
@@ -54,7 +54,8 @@ async function saveContent() {
         method: 'PUT',
         headers: {
           'Authorization': token,  // 替换为您自己的访问令牌
-          'Accept': 'application/vnd.github.v3+json'
+          'Accept': 'application/vnd.github.v3+json',
+          sha: sha
         },
         body: JSON.stringify(data)
       });
