@@ -3,7 +3,7 @@ async function saveContent() {
       let token = `token `;
       token += document.getElementById("token").value;
       // 获取GitHub仓库的API根据URL
-      const url = `https://api.github.com/repositories/590278809/contents/mdfile/log.md?ref=test`;
+      const url = `https://api.github.com/repositories/590278809/contents/mdfile/log.md?ref=main`;
       //const urltest = `https://api.github.com/repos/eightfy/eightfy.github.io/contents/mdfile/log.md?ref=test`;
       
       // 获取文件的SHA值
@@ -45,6 +45,7 @@ async function saveContent() {
       const encodedContent = textEncoder.encode(content);
       const base64Content = btoa(String.fromCharCode(...new Uint8Array(encodedContent)));
       console.log(encodedContent);
+      console.log(sha);
       const data = {
         message: message,
         content: base64Content,
@@ -55,7 +56,6 @@ async function saveContent() {
         headers: {
           'Authorization': token,  // 替换为您自己的访问令牌
           'Accept': 'application/vnd.github.v3+json',
-          sha: sha
         },
         body: JSON.stringify(data)
       });
