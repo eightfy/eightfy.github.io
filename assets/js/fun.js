@@ -22,7 +22,25 @@ async function saveContent() {
       const contentStr = atob(shaData.content);
       // 更新文件
       const message = `Add new content on ${year}-${month}-${day}`;
-      const content = `${year}-${month}-${day}\n\n> ${document.getElementById("content").value}\n\n${contentStr}`;
+      //获得时间
+      const options = {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: '2-digit',
+        timeZoneName: 'short',
+        timeZone: 'Asia/Shanghai',
+        hour12: false
+      };
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      const currentDate = new Date();
+      const formattedDate = formatter.format(currentDate).replace(/\//g, '-');
+      console.log(formattedDate);
+      
+      //组合字符串      
+      const content = `${formattedDate}\n\n> ${document.getElementById("content").value}\n\n${contentStr}`;
       const textEncoder = new TextEncoder();
       const encodedContent = textEncoder.encode(content);
       const base64Content = btoa(String.fromCharCode(...new Uint8Array(encodedContent)));
