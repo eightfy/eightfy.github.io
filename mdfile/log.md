@@ -5,7 +5,7 @@ Mon, 05-08-2023, 13:28 GMT+8
 Sun, 05-07-2023, 23:58 GMT+8
 
 > 初听アイドル还没太多感觉，只是中间那段调调听着安心，加入了每日歌单中。这几天就这mv听了一遍，突然就和歌曲狠狠共情了，循环播放！好喜欢星野爱啊，初见可爱单推——
-[](../assets/img/20230507_1.png)
+![](../assets/img/20230507_1.png)
 
 2023-05-06
 
@@ -13,5 +13,5 @@ Sun, 05-07-2023, 23:58 GMT+8
 
 2023-05-04
 
-> Only support en, tomorrow try zh!   [](../assets/img/qi.gif)
+> Only support en, tomorrow try zh!   ![](../assets/img/qi.gif)
 # 由此开始
