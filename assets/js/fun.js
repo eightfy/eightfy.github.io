@@ -19,7 +19,9 @@ async function saveContent() {
       });
       const shaData = await shaResponse.json();
       const sha = shaData.sha;
-      const contentStr = shaData.content;
+      const contentBytes = Uint8Array.from(atob(shaData.content), c => c.charCodeAt(0));
+      const textDecoder = new TextDecoder();
+      const contentStr = textDecoder.decode(contentBytes);
       // 更新文件
       const message = `Add new content on ${year}-${month}-${day}`;
       //获得时间
