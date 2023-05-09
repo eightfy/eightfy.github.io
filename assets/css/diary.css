@@ -54,8 +54,25 @@ cursor: pointer;
     justify-content: center;
     align-items: center;
   }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1000px) {
     body {
-        background-color:lightblue;
+      margin: 20px;
+      margin-top: 40px;
+      font-size: 36px;
+    }
+    label {
+      font-size: 44px;
+    }
+    textarea {
+      font-size: 36;
+      margin-top: 100px;
+    }
+    button {
+      border-radius: 5px;
+      padding: 8px 20px;
+      font-size: 30px;
+      }
+    input[type="password"] {
+      width: 30%;
     }
 }
