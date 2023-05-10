@@ -55,11 +55,6 @@ cursor: pointer;
     align-items: center;
   }
 @media screen and (max-width: 1000px) {
-    body {
-      margin: 20px;
-      margin-top: 40px;
-      font-size: 36px;
-    }
     label {
       font-size: 44px;
     }

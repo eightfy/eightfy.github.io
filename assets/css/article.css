@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "yao";
+    src: url("../font/yaya.ttf") format("truetype");
+  }
+  body {
+    color: #B3BEC4;
+    font-size: 20px;
+    font-family: "yao";
+  }
+  blockquote {
+    background-color: #313131;
+    color: #cadbe4;
+  }
+  @media screen and (max-width: 1000px) {
+    body {
+      font-size: 26px;
+    }
+  }
