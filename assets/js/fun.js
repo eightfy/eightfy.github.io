@@ -63,6 +63,13 @@ async function saveContent() {
       });
       const newData = await response.json();
       console.log(newData);
+      if (response.ok) {
+        // 请求成功，显示成功消息
+        const successMsg = document.createElement('p');
+        successMsg.textContent = '发送成功！';
+        const targetElement = document.querySelector('#success-container');
+        targetElement.appendChild(successMsg);
+    }
     } catch (error) {
       console.error(error);
     }
