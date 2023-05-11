@@ -5,7 +5,9 @@ display: inline-block;
 #mdcon blockquote p {
 background-color: transparent;display: block;
 }
-
+img {
+  background-color: #212121; /* 设置图片背景色为淡灰色 */
+}
 label {
 font-size: 16px;
 margin-bottom: 5px;

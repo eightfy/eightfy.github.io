@@ -1,6 +1,6 @@
 @font-face {
     font-family: "yao";
-    src: url("../font/yaya.ttf") format("truetype");
+    src: url("../font/851tegaki_zatsu_normal_0883.ttf") format("truetype");
   }
   body {
     color: #B3BEC4;
@@ -11,7 +11,7 @@
     margin-top: 100px;
   }
   img {
-    background-color: #515151; /* 设置图片背景色为淡灰色 */
+    background-color: #212121;
   }
   @media screen and (max-width: 1000px) {
     body {
