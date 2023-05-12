@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "yao";
+  src: url("../font/yaod.ttf") format("truetype");
+}
 body {
     margin-top: 10px;
+  }
+  img {
+    margin: 0px;
   }
 a {
     color: #a5ffffaf;
@@ -18,8 +25,11 @@ h1{
     margin: 20;
     margin-left: 50px;
   }
+span {
+  float: right;
+  font-family: "yao";
+}
 h2::before {
-    font-size: 60px;
     content: "|";
     color: #e8ebed;
     display: inline-block;
@@ -38,5 +48,10 @@ h2::before {
       }
       h2{
         margin: 0;
+      }
+      span {
+        margin-left: 10px;
+        float: none;
+        font-size: 10px;
       }
   }
