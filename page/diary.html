@@ -20,10 +20,18 @@
         <link href="/assets/css/code.css" type="text/css" rel="stylesheet" />
         <link href="/assets/css/diary.css" type="text/css" rel="stylesheet" />
         <script src="/assets/js/fun.js"></script>
-
-    </head>
-    
+        <script src="/assets/js/sidebar.js"></script>
+        <link href="/assets/css/sidebar.css" type="text/css" rel="stylesheet" />
+      </head>
+      
       <body>
+        <div class="wrap" id = "myElement">
+          <ul class="indul">
+            <li class="indlist"><a class="indexa" href="/index.html"style="text-decoration: none;">返回</a></li>
+            <button class="out-button" onclick="moveElement()">	&#8904;</button>
+          </ul>
+        </div>
+        <div id="content"></div>
         <form>
           <div">
             <label for="content" class="mb-2">Any RUBBISH that I want to DUMP:</label>

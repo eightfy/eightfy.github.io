@@ -12,19 +12,29 @@
           processEscapes: true 
         } };</script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <!-- 引入 marked.js 和 markdown-it -->
         <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
         <link href="/assets/css/main.css" type="text/css" rel="stylesheet" />
         <link href="/assets/css/code.css" type="text/css" rel="stylesheet" />
         <link href="/assets/css/article.css" type="text/css" rel="stylesheet" />
-    </head>
-    
+        <script src="/assets/js/sidebar.js"></script>
+        <link href="/assets/css/sidebar.css" type="text/css" rel="stylesheet" />
+      </head>
+      
       <body>
+        <div class="wrap" id = "myElement">
+          <ul class="indul">
+            <li class="indlist"><a class="indexa" href="/index.html"style="text-decoration: none;">返回</a></li>
+            <button class="out-button" onclick="moveElement()">	&#8904;</button>
+          </ul>
+        </div>
+        <div id="content"></div>
         <div id="mdcon"></div>
         <script>
           const files = [
+          //'../mdfile/math.md',
             '../mdfile/logic_ind.md'
         ];
           const getContent = async (file) => {
@@ -47,7 +57,7 @@
               const renderedMarkdown = md.render(markdownText);
               htmlText += renderedMarkdown;
             }
-            document.getElementById('mdcon').innerHTML = htmlText;
+            document.getElementById('content').innerHTML = htmlText;
           };
           renderContent();
         </script>
