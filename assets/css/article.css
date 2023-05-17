@@ -7,6 +7,10 @@
     font-size: 20px;
     font-family: "font";
   }
+  h1 {color: #ffffff}
+  h2 {color: #cce7f8}
+  h3 {color: #8dc7e7}
+  h4 {color: #2a99da}
   blockquote {
     background-color: #313131;
     color: #cadbe4;
