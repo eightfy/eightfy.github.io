@@ -141,3 +141,49 @@ umount -R /mnt
 reboot
 ```
 **安装成功!**
+
+# 安装后配置及GUI配置
+## 联网
+```bash
+nmcli device wifi list  # 列出可连接的 WiFi
+nmcli device wifi connect "SSID" password "password"  # 连接 WiFi
+```
+## 创建拥有root权限的普通用户
+```bash
+useradd -m -G wheel username  # 创建用户，并为其创建home目录，将其加入 wheel 组
+passwd username  # 为新用户设置密码
+pacman -S sudo
+ln -s /usr/bin/vim /usr/bin/vi
+visudo # 用专门的visudo命令来编辑sudo的配置文件
+```
+取消“# %wheel ALL=(ALL)ALL”的引用后重启
+```bash
+reboot
+···
+sudo pacman -Syu  # 系统更新
+```
+## 图形界面的安装
+```bash
+# intel的集成显卡驱动
+sudo pacman -S xf86-video-intel
+# xorg
+sudo pacman -S xorg
+sudo pacman -S sddm # 桌面管理器
+sudo systemctl enable sddm
+sudo systemctl enable NetworkManager
+```
+Tip：Arch下用于管理系统服务的命令systemctl：
+```bash
+sudo systemctl start   服务名 （启动一项服务）
+sudo systemctl stop    服务名 （停止一项服务）
+sudo systemctl enable  服务名 （开机启动一项服务）
+sudo systemctl disable 服务名 （取消开机启动一项服务）
+```
+
+## 本地化
+- 中文字体
+- 中文输入法
+
+```bash
+sudo pacman -S noto-fonts-cjk noto-fonts-emoji
+sudo pacman -S fcitx fcitx-im fcitx-rime
