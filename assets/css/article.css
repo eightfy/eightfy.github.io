@@ -18,6 +18,10 @@
   strong {
     color: #ffffff;
   }
+  a {
+    color: #a5ffffaf;
+    text-decoration: none;
+  }
   @media screen and (max-width: 1000px) {
     body {
       font-size: 26px;
