@@ -186,4 +186,24 @@ sudo systemctl disable 服务名 （取消开机启动一项服务）
 
 ```bash
 sudo pacman -S noto-fonts-cjk noto-fonts-emoji
-sudo pacman -S fcitx fcitx-im fcitx-rime
+sudo pacman -S fcitx fcitx5-im fcitx5-rime
+```
+## 配置终端代理（已安装clash）
+```bash
+sudo pacman -S proxychains-ng
+vim /etc/proxychains.conf
+```
+修改最后一行为
+> socks5 127.0.0.1 端口号
+
+然后可以通过proxychains-ng 启动程序
+```bash
+$ proxychains <program>
+```
+## 更换终端
+```bash
+sudo pacman -S zsh  # 安装zsh
+chsh -s /bin/zsh    # 配置zsh
+chsh -s /bin/bash   # 换回bash
+```
+各种配置各取所需。
