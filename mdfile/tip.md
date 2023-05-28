@@ -19,3 +19,8 @@ for (var i = 0; i < elements.length; i++) {
   elements[i].style.backgroundImage = "none";
 }
 ```
+- iptables开放端口
+```bash
+vim /etc/iptables/rules.v4
+iptables-restore < /etc/iptables/rules.v4
+```
