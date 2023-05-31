@@ -13,7 +13,7 @@ Thinkpad e420的启动顺序调整：开机时狂按f1进入启动列表设置Th
 > 
 > archiso login: root (automatic login)
 > To install Arch Linux follow the installation guide:
-> https://wiki.archlinux.org/title/Installation_guide
+> https: //wiki.archlinux.org/title/Installation_guide
 > 
 > ...
 
