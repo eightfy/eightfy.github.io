@@ -24,3 +24,8 @@ for (var i = 0; i < elements.length; i++) {
 vim /etc/iptables/rules.v4
 iptables-restore < /etc/iptables/rules.v4
 ```
+
+- i3
+```bash
+sudo startx /usr/bin/i3
+```
