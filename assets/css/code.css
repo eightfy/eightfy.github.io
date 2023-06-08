@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "intel";
+  src: url("../font/intelmono.ttf") format("truetype");
+}
 .MathJax_Display {
   overflow-x: auto; /* 让元素在 X 方向超出后自动显示水平滚动条 */
   overflow-y: hidden; /* 防止元素在 Y 方向上超出时出现垂直滚动条 */
@@ -6,6 +10,7 @@
 .hljs-ln td{
 padding-left: 6px;
 padding-right: 4px;
+font-family: "intel";
 }
 .hljs-ln-numbers {
 background-color: #282828; /* 设置行号背景颜色 */
