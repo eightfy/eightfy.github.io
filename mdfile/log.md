@@ -1,3 +1,8 @@
+Fri, 06-16-2023, 22:28 GMT+8
+
+> 响酱生日~爱你！！
+<img src="../assets/img/hibiki2023.png" alt="image" width="20%" />
+
 Sun, 06-04-2023, 23:00 GMT+8
 
 > 晓出净慈寺送林子方(宋•杨万里)
