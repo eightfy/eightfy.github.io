@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>os</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- 引入 marked.js 和 markdown-it -->
+        <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+        <link href="/assets/css/main.css" type="text/css" rel="stylesheet" />
+        <link href="/assets/css/article.css" type="text/css" rel="stylesheet" />
+        <script src="/assets/js/sidebar.js"></script>
+        <link href="/assets/css/sidebar.css" type="text/css" rel="stylesheet" />
+    </head>
+    
+      <body>
+        <div class="wrap" id = "myElement">
+          <ul class="indul">
+            <li class="indlist"><a class="indexa" href="/index.html"style="text-decoration: none;">返回</a></li>
+            <button class="out-button" onclick="moveElement()">	&#8904;</button>
+          </ul>
+        </div>
+        <div id="mdcon"></div>
+        <script>
+          const files = [
+            '../mdfile/os.md'
+        ];
+          const getContent = async (file) => {
+            const response = await fetch(file);
+            const text = await response.text();
+            return text;
+          };
+          const renderContent = async () => {
+            let htmlText = '';
+            for (const file of files) {
+              const markdownText = await getContent(file);
+              const md = window.markdownit({
+                html: true, // 允许渲染 HTML 标记
+                breaks: true, // 允许行内换行符
+                linkify: true, // 将 URL 自动转换为链接
+                typographer: true, // 将普通的引号转换为弯引号等
+                quotes: '“”‘’',
+                showMathMenu: true,
+              });
+              const renderedMarkdown = md.render(markdownText);
+              htmlText += renderedMarkdown;
+            }
+            document.getElementById('mdcon').innerHTML = htmlText;
+          };
+          renderContent();
+        </script>
+      </body>
+    </html>
+    
