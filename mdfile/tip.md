@@ -29,3 +29,16 @@ iptables-restore < /etc/iptables/rules.v4
 ```bash
 sudo startx /usr/bin/i3
 ```
+
+- win下批量修改当前目录文件+随机名称
+```bat
+@echo off
+setlocal enabledelayedexpansion
+for %%f in (*) do (
+  set "fname=%%~nf"
+  set "fname=!fname:[^a-zA-Z0-9_=+^&',`\s]=-!"
+  set "newname=!random!-!fname!.gif"
+  ren "%%~f" "!newname!"
+)
+endlocal
+```
