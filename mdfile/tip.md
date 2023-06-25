@@ -42,3 +42,8 @@ for %%f in (*) do (
 )
 endlocal
 ```
+
+- 破解pdf
+```bash
+gswin64.exe -sDEVICE=pdfwrite  -o "1.pdf" "img.pdf"
+```

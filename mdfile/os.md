@@ -103,3 +103,8 @@ bps表示比特每秒，每秒钟传输多少位信息
 - 路由算法！！例如迪杰斯特拉、距离向量
 - 路由协议，例如OSPF、BGP
 - SDN的概念
+
+
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=H:/img.pdf -c .setpdfwrite -f H:/img_1.pdf
+gswin64.exe -sDEVICE=pdfwrite  -o "1.pdf" "img.pdf"
+gswin64 -sDEVICE=pdfwrite -dFILTERTEXT -dFILTERIMAGE -o "1.pdf" "2.pdf"
