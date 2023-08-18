@@ -43,7 +43,7 @@ sort
 bool cmp(const pair<int, int>& a, const pair<int, int>& b) {
     return a.second < b.second;
 }
-vector<pair<int, int>> v = {{1, 4}, {2, 2}, {3, 5}, {4, 1}, {5, 3}};
+vector<pair<int, int>> v = \{\{1, 4\}, {2, 2}, {3, 5}, {4, 1}, {5, 3}\}
 sort(v.begin(), v.end(), cmp);
 //结果为{{4, 1}, {2, 2}, {5, 3}, {1, 4}, {3, 5}}
 ```
