@@ -77,6 +77,24 @@ do{
 ...
 ```
 #### 顺序容器
+set
+set 集合中元素有序且不重复
+```cpp
+set<int> s(a.begin(), a.end());
+s.insert(1);
+s.inset(first,second); //将区间插入(求并集)
+s.erase(1);
+s.erase(iterator);
+erase(first,second) //删除区间，左闭右开
+s.find(1); //查找元素位置，返回指针
+s.count(1); //查找set中某个键值出现的次数。一个键值在set只可能出现0或1次。
+pr = s.equal_range(3);
+cout << *pr.first << endl; //第一个大于等于 3 的数
+cout << *pr.second << endl; //第一个大于 3 的数
+lower_bound(key_value) //返回第一个大于等于key_value的定位器
+upper_bound(key_value) //返回最后一个大于等于key_value的定位器
+```
+map
 
 ## 杂记
 2023-8-18 0:49，怀着十分悲痛、绝望、不情愿的心情，我开始了cpp以及csp的学习。为了下学期的csp考试，更是为了考研。
