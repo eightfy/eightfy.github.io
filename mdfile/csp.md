@@ -95,6 +95,27 @@ lower_bound(key_value) //返回第一个大于等于key_value的定位器
 upper_bound(key_value) //返回最后一个大于等于key_value的定位器
 ```
 map
-
+```cpp
+std::map<int, std::string> myMap;
+myMap.insert(std::pair<int, std::string>(1, "Apple"));
+myMap.insert(std::pair<int, std::string>(2, "Banana"));
+myMap.insert(std::pair<int, std::string>(3, "Cherry"));
+// 使用下标操作符访问特定键的值
+std::cout << "Value at key 2: " << myMap[2] << std::endl;
+// 查找特定键的值
+auto it = myMap.find(3);
+if (it != myMap.end()) {
+  std::cout << "Value at key 3: " << it->second << std::endl;
+}
+// 遍历std::map中的键-值对
+for (const auto& pair : myMap) {
+  std::cout << pair.first << ": " << pair.second << std::endl;
+}
+//使用find中途遍历
+cout << myMap.find(2)->second <<endl;
+for (auto it = myMap.find(2); it != myMap.end(); ++it) {
+std::cout << it->first << ": " << it->second << std::endl;
+}
+```
 ## 杂记
 2023-8-18 0:49，怀着十分悲痛、绝望、不情愿的心情，我开始了cpp以及csp的学习。为了下学期的csp考试，更是为了考研。
