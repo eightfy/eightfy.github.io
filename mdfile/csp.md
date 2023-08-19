@@ -1,5 +1,5 @@
 ## stl
-#### cpp
+### cpp
 万用头文件
 ```cpp
 #include<bits/stdc++.h>
@@ -35,7 +35,7 @@ int a; string b;
 //解包, ignore占位
 tie(a, b, ignore) = test2;
 ```
-#### 算法
+### 算法
 sort
 传入区间第一个元素的地址和最后一个元素下一个位置的地址将区间进行升序排序,O(nlogn)
 ```cpp
@@ -76,7 +76,7 @@ do{
 1 3 2 4
 ...
 ```
-#### 顺序容器
+### 顺序容器
 set
 set 集合中元素有序且不重复
 ```cpp
@@ -100,6 +100,7 @@ std::map<int, std::string> myMap;
 myMap.insert(std::pair<int, std::string>(1, "Apple"));
 myMap.insert(std::pair<int, std::string>(2, "Banana"));
 myMap.insert(std::pair<int, std::string>(3, "Cherry"));
+//也可使用 myMap[1] = "Apple";
 // 使用下标操作符访问特定键的值
 std::cout << "Value at key 2: " << myMap[2] << std::endl;
 // 查找特定键的值
@@ -116,6 +117,25 @@ cout << myMap.find(2)->second <<endl;
 for (auto it = myMap.find(2); it != myMap.end(); ++it) {
 std::cout << it->first << ": " << it->second << std::endl;
 }
+```
+### 容器适配器
+不支持迭代器。
+stack 栈
+```cpp
+stack<T> s;
+s.push(element);
+s.pop();  // 弹出栈顶元素
+T topElement = s.top();  // 获取栈顶元素的值
+bool isEmpty = s.empty();  // 栈为空返回 true，否则返回 false
+int stackSize = s.size();  // 获取栈中元素的个数
+```
+priority_queue 优先队列
+```cpp
+priority_queue<T, vector<T>, greater<T> > q; //小根堆
+priority_queue<T, vector<T>, less<T> > q; //大根堆
+q.front(); //队首
+q.back(); //队尾
+// 结构体重载只需要重载一个<号
 ```
 ## 杂记
 2023-8-18 0:49，怀着十分悲痛、绝望、不情愿的心情，我开始了cpp以及csp的学习。为了下学期的csp考试，更是为了考研。
