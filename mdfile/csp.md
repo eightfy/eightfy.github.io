@@ -12,6 +12,10 @@ Point operator + (const Point &p){
     return Point(x + p.x, y + p.y);
 }
 ```
+二维数组
+```cpp
+vector<vector<int> > array(m)
+```
 模板类
 ```cpp
 //在类名后面写一个尖括号，里面是模板参数
@@ -137,5 +141,9 @@ q.front(); //队首
 q.back(); //队尾
 // 结构体重载只需要重载一个<号
 ```
+
+## 动态规划
+
+
 ## 杂记
 2023-8-18 0:49，怀着十分悲痛、绝望、不情愿的心情，我开始了cpp以及csp的学习。为了下学期的csp考试，更是为了考研。
