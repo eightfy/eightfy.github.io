@@ -14,7 +14,14 @@ Point operator + (const Point &p){
 ```
 二维数组
 ```cpp
-vector<vector<int> > array(m)
+vector<vector<int> > array(m);
+//初始化一个m*n的二维数组
+for(int i=0;i<m;i++) 
+    array[i].resize(n);
+//遍历赋值
+for(i = 0; i < array.size(); i++)
+ 　　for (j = 0; j < array[0].size();j++) 
+        array[i][j] = (i+1)*(j+1); 
 ```
 模板类
 ```cpp
