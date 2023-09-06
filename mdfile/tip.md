@@ -47,3 +47,11 @@ endlocal
 ```bash
 gswin64.exe -sDEVICE=pdfwrite  -o "1.pdf" "img.pdf"
 ```
+
+- conda 基本操作
+```bash
+conda env list   // 查看已创建环境
+conda env remove --name <环境名称>   // 删除环境
+conda list     // 进入环境后查看包列表
+conda list | grep numpy    // 查询包（numpy）
+```
