@@ -207,3 +207,22 @@ chsh -s /bin/zsh    # 配置zsh
 chsh -s /bin/bash   # 换回bash
 ```
 各种配置各取所需。
+
+## tip
+- 彩色logo
+```bash
+eofetch | lolcat 
+```
+- 蓝牙
+```
+bluetoothctl
+```
+- secrets
+```
+$ ls -l | nms
+$ ls -l | nms -a           // Set auto-decrypt flag
+$ ls -l | nms -s           // Set flag to mask space characters
+$ ls -l | nms -f green     // Set foreground color to green
+$ ls -l | nms -c           // Clear screen
+$ nms -v                   // Display version
+```
