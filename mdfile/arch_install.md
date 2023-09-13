@@ -226,3 +226,8 @@ $ ls -l | nms -f green     // Set foreground color to green
 $ ls -l | nms -c           // Clear screen
 $ nms -v                   // Display version
 ```
+
+- ~ openssh
+   ```bash
+   ssh username@hostname
+   ```
