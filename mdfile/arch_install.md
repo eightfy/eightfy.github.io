@@ -215,7 +215,9 @@ eofetch | lolcat
 ```
 - 蓝牙
 ```
-bluetoothctl
+systemctl start bluetooth
+sudo modprobe btusb
+sudo bluetoothctl
 ```
 - secrets
 ```
@@ -231,3 +233,6 @@ $ nms -v                   // Display version
    ```bash
    ssh username@hostname
    ```
+
+- cd
+sudo cdda2wav -B dev=/dev/sr0 /home/.../
