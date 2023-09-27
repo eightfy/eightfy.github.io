@@ -69,18 +69,29 @@ LP 要求陈述在*原则上*可检验而不需要当下可检验。但其本身
 - 第一组：前提-结论  
   1. 诉诸大众(appeal to the crowd)
 大众相信A，所以A真
-  2. 反对者
-  3. 起源
-  4. 诉诸无知
-  5. 后此谬误
-  6. 部分-整体
-  7. 诉诸权威
-  8. 人身攻击
-  9. 支持-反对
-  10. 非黑即白
-  11. 刻板印象
-  12. 诉诸强力
-  13. 复杂问句
+  2. 反对者(opposition)
+反对者相信A，所以A假
+  3. 起源(genetic)
+可解释相信A的原因，所以A假
+  4. 诉诸无知(appeal to ignorance)
+A假因为未曾得证，A真因为无人反驳
+  5. 后此谬误(post hoc ergo propter hoc)
+A在B后发生，所以A由B引起
+  6. 部分-整体(part-whole)
+A的部分也是A，所有部分是A则为A
+  7. 诉诸权威(appeal to authority)
+
+  8. 人身攻击(ad hominem)
+
+  9.  支持-反对(Pro-con)
+
+  10. 非黑即白(black-and-white)
+
+  11. 刻板印象(false stereotype)
+
+  12. 诉诸强力(appeal to force)
+  13. 复杂问句(complex question)
+假定了某些假的事情为真的问句
 # 逻辑学导论
 > 参考：熊明辉《逻辑学导论》
 
