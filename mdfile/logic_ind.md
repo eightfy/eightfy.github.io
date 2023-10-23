@@ -130,8 +130,13 @@ X is A
 (above is all we know)
 $\therefore$ the probability that X is B is N%
 
+强（strong）的归纳论证：结论相对于前提来说是概然的
+可信的（reliable）：既是一个强的归纳论证又包含真前提
 
-
+||演绎|归纳|
+|---|---|---|
+|前提/结论正确联系|有效|强|
+|+前提真|可靠|可信|
 
 # 逻辑学导论
 > 参考：熊明辉《逻辑学导论》
