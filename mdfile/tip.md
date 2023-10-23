@@ -55,3 +55,8 @@ conda env remove --name <环境名称>   // 删除环境
 conda list     // 进入环境后查看包列表
 conda list | grep numpy    // 查询包（numpy）
 ```
+
+- pandoc md2pdf
+``` bash
+pandoc Untitled.md -o srs.pdf --pdf-engine=xelatex -V CJKmainfont=‘Microsoft YaHei’
+```
