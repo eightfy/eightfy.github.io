@@ -153,6 +153,7 @@ $\therefore$ the probability that X is B is N%
 ### 从样本进行推理
 推理的强度依赖于：1.样本的规模 2.样本的多样性 3.结论的谨慎度
 样本-投射论证
+
 ### 类比推理
 类比三段论（analogy syllogism）的一般论证形式：
 > 大部分对 X 成立的对 Y 也成立
@@ -180,6 +181,19 @@ $\therefore$ 很可能 B 是/部分是 A 发生的原因或相反
 4. 共变法（variation method）
 > A 以某种方式改变当且仅当 B 也以某种方式改变
 $\therefore$ 很可能 A 的改变导致了 B 的改变或相反，或有共因 C 同时导致了 A and B
+
+### 科学定律
+简单性标准（simplicity）是奥卡姆剃刀（Ockham's razor）的一种标准形式：
+> 其他条件相同的情况下，相对于复杂的理论，偏向更简单的理论
+
+融贯性标准（coherence criterion）
+> 其他条件相同的情况下，选择与已有的成熟信念更和谐融入（harmonizers with）的理论
+
+## 基础命题逻辑
+命题逻辑（propositional logic），研究那些有效性依赖于 if-then / and / or / not 及类似概念的论证。
+
+### 
+
 
 # 逻辑学导论
 > 参考：熊明辉《逻辑学导论》
