@@ -66,32 +66,19 @@ LP 要求陈述在*原则上*可检验而不需要当下可检验。但其本身
 - 证明：一个非循环的、无歧义的、具有清晰真前提的演绎有效论证
 - 反驳：对陈述的否定作出的证明
 ### 非形式谬误 
-- 第一组：前提-结论  
-  1. 诉诸大众(appeal to the crowd)
-大众相信A，所以A真
-  2. 反对者(opposition)
-反对者相信A，所以A假
-  3. 起源(genetic)
-可解释相信A的原因，所以A假
-  4. 诉诸无知(appeal to ignorance)
-A假因为未曾得证，A真因为无人反驳
-  5. 后此谬误(post hoc ergo propter hoc)
-A在B后发生，所以A由B引起
-  6. 部分-整体(part-whole)
-A的部分也是A，所有部分是A则为A
-  7. 诉诸权威(appeal to authority)
-
-  8. 人身攻击(ad hominem)
-
-  9.  支持-反对(Pro-con)
-
-  10. 非黑即白(black-and-white)
-
-  11. 刻板印象(false stereotype)
-
-  12. 诉诸强力(appeal to force)
-  13. 复杂问句(complex question)
-假定了某些假的事情为真的问句
+1. 诉诸大众(appeal to the crowd)，大众相信A，所以A真
+2. 反对者(opposition)，反对者相信A，所以A假
+3. 起源(genetic)，可解释相信A的原因，所以A假
+4. 诉诸无知(appeal to ignorance)，A假因为未曾得证，A真因为无人反驳
+5. 后此谬误(post hoc ergo propter hoc)，A在B后发生，所以A由B引起
+6. 部分-整体(part-whole)，A的部分也是A，所有部分是A则为A
+7. 诉诸权威(appeal to authority)
+8. 人身攻击(ad hominem)
+9.  支持-反对(Pro-con)
+10. 非黑即白(black-and-white)
+11. 刻板印象(false stereotype)
+12. 诉诸强力(appeal to force)
+13. 复杂问句(complex question)，假定了某些假的事情为真的问句
 
 ### 不一致性
 当一系列单个的**似真**（plausible）陈述不能一致地组合时就会出现争议。
@@ -191,6 +178,11 @@ $\therefore$ 很可能 A 的改变导致了 B 的改变或相反，或有共因 
 
 ## 基础命题逻辑
 命题逻辑（propositional logic），研究那些有效性依赖于 if-then / and / or / not 及类似概念的论证。
+
+### 命题语言（propositional language）
+命题符号：使用大写字母表示命题的原子符号
+逻辑连接词（Logical Connectives）：用来表示命题之间的逻辑关系。常见的逻辑连接词有以下几种：
+否定（Negation）符号"¬"，合取（Conjunction）符号"∧"，析取（Disjunction）符号"∨"，蕴含（Implication）符号"→"，等价（Equivalence，双蕴含）符号"↔"。
 
 ### 
 
