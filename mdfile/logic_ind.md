@@ -180,10 +180,12 @@ $\therefore$ 很可能 A 的改变导致了 B 的改变或相反，或有共因 
 命题逻辑（propositional logic），研究那些有效性依赖于 if-then / and / or / not 及类似概念的论证。
 
 ### 命题语言（propositional language）
-命题符号：使用大写字母表示命题的原子符号
-逻辑连接词（Logical Connectives）：用来表示命题之间的逻辑关系。常见的逻辑连接词有以下几种：
+命题符号是使用大写字母表示命题的原子符号，逻辑连接词（Logical Connectives）是用来表示命题之间的逻辑关系。常见的逻辑连接词有以下几种：
 否定（Negation）符号"¬"，合取（Conjunction）符号"∧"，析取（Disjunction）符号"∨"，蕴含（Implication）符号"→"，等价（Equivalence，双蕴含）符号"↔"。
-
+良构公式 wwf ，简称**公式**
+> 1.任何原子命题都是一个公式
+> 2.在任何公式前添加"¬"得到的也是公式
+> 3.将任意两个公式通过"∧"、"∨"、"→"、"↔"连接后再用括号封闭得到的也是公式
 ### 
 
 
