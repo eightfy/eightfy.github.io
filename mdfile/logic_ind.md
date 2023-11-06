@@ -195,6 +195,8 @@ $(P \lor Q)$是一个析取式，P 和 Q 是它的析取项，表示或者-OR
 $(P \to Q)$是一个条件句，P 前件（antecedent），Q 是后件（consequent），表示如果·那么-IF·THEN
 $(P \leftrightarrow Q)$是一个双条件句，表示当且仅当-IFF
 $(\neg P)$是一个否定，表示并非-NOT
+
+重言式（tautology），永真；自相矛盾，永假
 ### 真值表
 
 
