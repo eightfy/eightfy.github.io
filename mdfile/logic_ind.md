@@ -186,7 +186,17 @@ $\therefore$ 很可能 A 的改变导致了 B 的改变或相反，或有共因 
 > 1.任何原子命题都是一个公式
 > 2.在任何公式前添加"¬"得到的也是公式
 > 3.将任意两个公式通过"∧"、"∨"、"→"、"↔"连接后再用括号封闭得到的也是公式
-### 
+
+逆否命题（contrapositive）与原命题等价。
+$$ (D \to A) \leftrightarrow (\neg A \to \neg D) $$
+
+$(P \land Q)$是一个合取式，P 和 Q 是它的合取项，表示并且-AND
+$(P \lor Q)$是一个析取式，P 和 Q 是它的析取项，表示或者-OR
+$(P \to Q)$是一个条件句，P 前件（antecedent），Q 是后件（consequent），表示如果·那么-IF·THEN
+$(P \leftrightarrow Q)$是一个双条件句，表示当且仅当-IFF
+$(\neg P)$是一个双条件句，表示当且仅当-IFF
+### 真值表
+
 
 
 # 逻辑学导论
