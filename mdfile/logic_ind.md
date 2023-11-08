@@ -202,6 +202,23 @@ $(\neg P)$是一个否定，表示并非-NOT
 充分必要条件：
 充分：$(P \to Q)$ ，必要：$(\neg P \to \neg Q)$ ，充分必要：$(P \leftrightarrow Q)$
 
+### S-Rules
+推理规则（inference rules），为形式证明提供构成部分的有效推演规则。s 规则用于*简化语句。
+$$ AND: (P \land Q) to P, Q $$
+$$ NOR: \neg (P \lor Q) to \neg P, \neg Q $$
+$$ NIF: \neg (P \to Q) to P, \neg Q $$
+真的 AND 语句必定全真，假的 OR 语句必定全假，假的 IF-THEN 一定前真后假。
+
+### I-Rules
+$$ NOT-BOTH: \neg (P \land Q), P to \neg Q $$
+$$ OR: (P \lor Q), \neg P to Q $$
+$$ IF-THEN: (P \to Q), P to Q, \neg Q to \neg P $$
+
+
+
+
+
+
 # 逻辑学导论
 > 参考：熊明辉《逻辑学导论》
 
