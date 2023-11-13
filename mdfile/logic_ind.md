@@ -214,6 +214,10 @@ $$ NOT-BOTH: \neg (P \land Q), P to \neg Q $$
 $$ OR: (P \lor Q), \neg P to Q $$
 $$ IF-THEN: (P \to Q), P to Q, \neg Q to \neg P $$
 
+## 命题证明-形式证明
+1. START（假设结论的反命题）
+2. S&I（使用 S/R 规则推出更多命题找到**矛盾**）
+3. RAA（归谬法，推出原结论，reductio ad absurdum）
 
 
 
