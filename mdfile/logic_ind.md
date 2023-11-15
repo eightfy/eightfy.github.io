@@ -208,7 +208,10 @@ $$ AND: (P \land Q) to P, Q $$
 $$ NOR: \neg (P \lor Q) to \neg P, \neg Q $$
 $$ NIF: \neg (P \to Q) to P, \neg Q $$
 真的 AND 语句必定全真，假的 OR 语句必定全假，假的 IF-THEN 一定前真后假。
-
+扩展：
+$$ NN: \neg \neg P to P $$
+$$ IFF: (P \leftrightarrow Q) to (P \to Q), (Q \to P) $$
+$$ NIFF: \neg (P \leftrightarrow Q) to (P \lor Q), \neg (Q \land P) $$
 ### I-Rules
 $$ NOT-BOTH: \neg (P \land Q), P to \neg Q $$
 $$ OR: (P \lor Q), \neg P to Q $$
@@ -218,8 +221,8 @@ $$ IF-THEN: (P \to Q), P to Q, \neg Q to \neg P $$
 1. START（假设结论的反命题）
 2. S&I（使用 S/R 规则推出更多命题找到**矛盾**）
 3. RAA（归谬法，推出原结论，reductio ad absurdum）
-
-
+- 前提 premise + 假设 assumption + 衍推行 derived line
+4. REFUTE（反驳）：构造一个包含所有没有被分隔的简单公式的反驳框，将其结果作为真值代入原论证，出现前提全真而结论为假则论证无效。
 
 
 
