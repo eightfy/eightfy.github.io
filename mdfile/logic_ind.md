@@ -217,14 +217,33 @@ $$ NOT-BOTH: \neg (P \land Q), P to \neg Q $$
 $$ OR: (P \lor Q), \neg P to Q $$
 $$ IF-THEN: (P \to Q), P to Q, \neg Q to \neg P $$
 
-## 命题证明-形式证明
+### 命题证明-形式证明
 1. START（假设结论的反命题）
 2. S&I（使用 S/R 规则推出更多命题找到**矛盾**）
 3. RAA（归谬法，推出原结论，reductio ad absurdum）
 - 前提 premise + 假设 assumption + 衍推行 derived line
 4. REFUTE（反驳）：构造一个包含所有没有被分隔的简单公式的反驳框，将其结果作为真值代入原论证，出现前提全真而结论为假则论证无效。
 
+对于较困难的证明（无法应用更多的 I/S），使用新假设分解一个复杂公式（不要假设一整行的否定）：
+- 一个生效假设（live）是一个没被分隔的假设。几个生效假设用几个星号。
 
+### Copi Proofs
+科皮证明:
+八条推理规则
+$$ 增加 AD: P to (P\lor Q) $$
+$$ 合取 CJ: P, Q to (P\land Q) $$
+$$ 二难 DI: ((P\to Q)\land (R\to S)), (P\lor R) to (Q\lor S) $$
+$$ 析取三段论 DS: (P\lor Q), \neg P to Q $$
+$$ 假言三段论 HS: (P\to Q), (Q\to R) to (P\to R) $$
+$$ 肯定前件 MP: (P\to Q), P to Q $$
+$$ 否定后件 MT: (P\to Q), \neg Q to \neg P $$
+$$ 简化 SP: (P\land Q) to P $$
+十条恒等替换规则
+结合、交换、分配、德摩根、双重否定、等价（充分必要）、重复、换位、
+导出 Exportation: $ ((P\land Q)\to R) = (P\to (Q\to R)) $
+Implication: $ (P\to Q) = (\neg P \lor Q) $
+
+## 基础量化逻辑
 
 # 逻辑学导论
 > 参考：熊明辉《逻辑学导论》
