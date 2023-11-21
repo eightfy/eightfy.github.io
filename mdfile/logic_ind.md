@@ -244,6 +244,10 @@ $$ 简化 SP: (P\land Q) to P $$
 Implication: $ (P\to Q) = (\neg P \lor Q) $
 
 ## 基础量化逻辑
+量化逻辑（Quantificational Logic）研究有效性依赖于“所有”“没有”“有些”等概念的论证。
+
+
+
 
 # 逻辑学导论
 > 参考：熊明辉《逻辑学导论》
