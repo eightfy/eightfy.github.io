@@ -257,6 +257,23 @@ quantification language：包括命题逻辑的字母表、公式、推理规则
 > 4.一个大写字母后紧接一个小写字母是公式
 > 5.一个量词后紧接一个公式仍是公式
 
+论域（universe of discourse）是在给定的上下文中，词语“所有”、“有些”、“没有”可讨论的对象集合
+
+### 证明
+按照如下顺序使用量词规则：
+1. 对偶规则（dual rule）
+$$ \neg (\forall x)F(x) to (\exists x)\neg F(x) $$
+$$ \neg (\exists x)F(x) to (\forall x)\neg F(x) $$
+2. 存在量词消去：去除存在量词，并使用新常元替换存在量词论域的所有变元
+3. 全称量词消去：去除全称量词，并使用任意常元替换存在量词论域的所有变元（不需要标星号）
+
+### 科皮规则（量化）
+- 实例化规则（instantiation rules）：去掉一个量词，常元替换变元
+- 概括规则（generalization rules）：增加一个量词，变元替换常元
+- 量词否定：$ (\exists x)P = \neg(\forall x)\neg P $
+
+## 等词和关系
+
 # 逻辑学导论
 > 参考：熊明辉《逻辑学导论》
 
