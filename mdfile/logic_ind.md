@@ -240,8 +240,8 @@ $$ 否定后件 MT: (P\to Q), \neg Q to \neg P $$
 $$ 简化 SP: (P\land Q) to P $$
 十条恒等替换规则
 结合、交换、分配、德摩根、双重否定、等价（充分必要）、重复、换位、
-导出 Exportation: $ ((P\land Q)\to R) = (P\to (Q\to R)) $
-Implication: $ (P\to Q) = (\neg P \lor Q) $
+导出 Exportation: $((P\land Q)\to R) = (P\to (Q\to R))$
+Implication: $(P\to Q) = (\neg P \lor Q)$
 
 ## 基础量化逻辑
 量化逻辑（Quantificational Logic）研究有效性依赖于“所有”“没有”“有些”等概念的论证。
@@ -290,6 +290,28 @@ $$ x = y, \neg y = z $$
 
 ## 基础模态逻辑
 模态逻辑（modal logic）研究其有效性依赖于**可能（possible）**､**必然（necessary）**等概念的论证。
+
+### 模态语言
+在命题逻辑的字母表、wwf、推理规则和证明上追加**模态算子** $\diamondsuit \ 和\  \square$ ：
+> $\diamondsuit A$，A是可能的（A在某个可能世界为真）
+> $A$，A是真的（A在现实世界为真)
+> $\square A$，A是必然的的（A在所有可能世界为真）
+
+这里的可能意指**逻辑可能**（不自相矛盾），区别于物理可能。一个可能世界（possible world）就是一个关于事情可以如何（might have been）或可以实际如何的***一致***的描述。而现实世界则是描述事情实际如何。
+*必然*是断言*不得不为真 (has to be)，不可以为假 (coudn\`t have been`)*
+
+在命题公式规则上追加：
+> $\diamondsuit \ 或 \ \square$后接一个wwf也是wwf
+
+- example:
+A 与 B 是一致的（相容的）= $\diamondsuit(A \land B)$  = A 和 B 都为真是可能的
+A 衍推（entails） B = $\square(A \to B)$  = 必然的是，如果 A 那么 B
+
+- 歧义：内部方块与外部方块
+  $(B \to \square U)$ , 后件必然、简单必然；$\square(B \to U)$，后承必然，条件必然
+
+### 证明：世界前缀&模态推理规则
+一个世界前缀（world prefix）是由零个或更多"W"构成的符号串，表示可能世界，空串表示现实世界。衍推行就是由一个世界前缀接$"\therefore"$和一个wwf构成的一行。假设就是一个世界前缀接"asm:"和一个wwf构成的一行。
 
 
 # 逻辑学导论
