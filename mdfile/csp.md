@@ -155,7 +155,101 @@ q.back(); //队尾
 ```
 
 ## 动态规划
+> 给你一个整数数组 cost ，其中 cost[i] 是从楼梯第 i 个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。
+你可以选择从下标为 0 或下标为 1 的台阶开始爬楼梯。
+请你计算并返回达到楼梯顶部的最低花费。
 
+```cpp
+class Solution {
+public:
+    int minCostClimbingStairs(vector<int>& cost) {
+        vector<int> a(cost.size()+1);
+        a[0] = 0;
+        a[1] = 0;
+        for(int i = 2; i < a.size(); i++)
+            a[i] = min(a[i-1] + cost[i-1], a[i-2] + cost[i-2]);
+        return a[a.size()-1];
+    }
+};
+```
+> 给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。每次只能向下或者向右移动一步。
+```cpp
+class Solution {
+public:
+    int minPathSum(vector<vector<int>>& grid) {
+        int m = grid.size(); int n = grid[0].size();
+        for(int i=m-2;i>=0;i--) grid[i][n-1] += grid[i+1][n-1];
+        for(int i=n-2;i>=0;i--) grid[m-1][i] += grid[m-1][i+1];
+        for(int i=n-2;i>=0;i--) 
+            for(int j = m-2;j>=0;j--)
+                grid[j][i] += min(grid[j][i+1] , grid[j+1][i]);
+        return grid[0][0];
+    }
+};
+```
+## python
+### defaultdict & OrderedDict
+设置一个默认值作为字典中新key的默认值，默认是None。
+```python
+from collections import defaultdict
+data_dic = defaultdict("默认值")
+```
+用 OrderedDict 实现先进先出的队列
+```python
+from collections import OrderedDict
+
+
+class FIFO(OrderedDict):
+    def __init__(self, capacity):
+        super().__init__()
+        self.capacity = capacity
+
+    def __setitem__(self, key, value):
+        if len(self) >= self.capacity:  # 容量已满
+            self.popitem(last=False)  # 删除最早的元素
+        super().__setitem__(key, value)
+
+q = FIFO(3)
+q['a'] = 1
+q['b'] = 2
+q['c'] = 3
+print(q)  # 输出：FIFO([('a', 1), ('b', 2), ('c', 3)])
+q['d'] = 4
+print(q)  # 输出：FIFO([('b', 2), ('c', 3), ('d', 4)])
+# popitem()方法弹出最后插入的元素。参数last指定弹出最后还是第一个
+print(ordered_dict.popitem()) 
+print(ordered_dict.popitem(last=False))
+```
+ove_to_end()方法将OrderedDict中的某个元素移动到双向链表的尾或头，接受两个参数，是key指定移动的元素；last指定移动方向，为True移动到尾，为False移动到头
+
+### Counter
+- Counter类型可以接受一个可迭代对象作为参数，并对其中的元素进行计数。同时，还可以接受一个字典对象作为参数，用于初始化计数器。Counter可以相加减
+```python
+from collections import Counter
+
+# 通过可迭代对象初始化计数器
+c1 = Counter('hello')
+print(c1)  # Counter({'l': 2, 'h': 1, 'e': 1, 'o': 1})
+
+# 通过字典对象初始化计数器
+c2 = Counter({'red': 4, 'blue': 2})
+print(c2)  # Counter({'red': 4, 'blue': 2})
+```
+- elements()：返回一个迭代器，其中包含每个元素的重复次数。如果重复次数为0或负数，则不会返回该元素。
+- most_common([n])：返回一个包含n个最常见元素及其计数的列表。如果n为空，则返回所有元素及其计数的列表。
+- subtract([iterable-or-mapping])：从计数器中减去指定的元素或计数器。这个方法会修改计数器本身。
+```python
+from collections import Counter
+
+c = Counter('hello')
+print(list(c.elements()))  # ['h', 'e', 'l', 'l', 'o']
+
+print(c.most_common(2))  # [('l', 2), ('h', 1)]
+
+c.subtract('world')
+print(c)  # Counter({'l': 1, 'h': 1, 'e': 1, 'o': 1, 'w': -1, 'r': -1, 'd': -1})
+
+```
 
 ## 杂记
 2023-8-18 0:49，怀着十分悲痛、绝望、不情愿的心情，我开始了cpp以及csp的学习。为了下学期的csp考试，更是为了考研。
