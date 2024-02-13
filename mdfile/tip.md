@@ -60,3 +60,8 @@ conda list | grep numpy    // 查询包（numpy）
 ``` bash
 pandoc Untitled.md -o srs.pdf --pdf-engine=xelatex -V CJKmainfont=‘Microsoft YaHei’
 ```
+
+- linux清理文件：列出当前目录最大的十个文件
+```bash
+du -ah . | sort -hr | head -n 10
+```
