@@ -36,6 +36,22 @@ $v\ 与\ \hat{v}$：赋值(At)和真值(PF)
 
 等价(充分必要)：$\leftrightarrow$
 替换：若公式 A 是公式 C 中(多次出现)的子公式，则可特别指定 A 在 C 中从左到右第 i 次出现，记作 $C_A$，将该次出现的 A 替换为 B 则记作 $C_B$
+- **替换定理**：
+  1. $(A\leftrightarrow B)\models (C_A\leftrightarrow C_B)$。
+  2. 若$A\leftrightarrow B$是重言式，则$C_A\leftrightarrow C_B$也是。
+- **联结词个数定理**：
+  对任意公式 C，都存在一个公式 D 使得$\models(C\leftrightarrow D)$且 D 中出现的联结词属于${\neg, \land}$ or ${\neg, \lor}$ or ${\neg, \to}$
+
+### 公理及推理规则
+**公理**:
+  1. $A\to(B\to A)$
+  2. $(A\to(B\to C))\to((A\to B)\to(A\to C))$
+  3. $(\neg A\to\neg B)\to(B\to A)$
+**推理规则（分离规则 MP）**: $\frac{A, A\to B}{B}
+若$A, A\to B$，则$B$，即$B$是$A, A\to B$的直接后承（推论，推论是前提的直接后承）
+
+### 形式证明及形式定理
+
 
 ## 谓词演算
 

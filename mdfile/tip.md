@@ -65,3 +65,9 @@ pandoc Untitled.md -o srs.pdf --pdf-engine=xelatex -V CJKmainfont=‘Microsoft Y
 ```bash
 du -ah . | sort -hr | head -n 10
 ```
+
+- 免密ssh
+```bash
+ssh-keygen -t rsa 
+ssh-copy-id -i id_rsa.pub hadoop@node2
+```
