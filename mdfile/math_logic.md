@@ -66,12 +66,15 @@ ${\to，\neg}$ 是一个连接符的完备集。公理是有效的命题形式�
 ### 形式推演
 **定义：形式推演**
 设$\Game$是一些公式组成的集合。称公式序列$A_1, A_2, ..., A_n$是从$\Game$中的公式出发的*形式推演*，如果对任意$i$，$1\leq i \geq n$，都有下列之一成立：
-  1. $A_i\in \Gama$ ，或
+  1. $A_i\in \Gamma$ ，或
   2. $A_i$ 是公理，或
   3. 存在$j_1, j_2 < i$使得$A_i$是$A_{j_1}$和$A_{j_2}$关于分离规则的直接后承。
 
-如果存在从$\Gama$中的公式出发的形式推演使得$A$是该推演的最后一个公式，则称$A$可由$\Gama$推出，记作$\Gama\vdash A$
-
+如果存在从$\Gamma$中的公式出发的形式推演使得$A$是该推演的最后一个公式，则称$A$可由$\Gamma$推出，记作$\Gamma\vdash A$
+引理：设$\Gamma, \Delta$为公式的集合，$A, B$为公式，则
+  1. $A\vdash A$
+  2. 若$\Delta\vdash A$且$\Delta\in\Game$，则$\Game\vdash A$
+  3. 若$\Delta\vdash B$且$\Game, B\vdash A$，则$\Game, \Delta\vdash A$
 ## 谓词演算
 
 ## 可计算性理论
