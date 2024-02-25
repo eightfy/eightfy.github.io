@@ -65,7 +65,7 @@ ${\to，\neg}$ 是一个连接符的完备集。公理是有效的命题形式�
 
 ### 形式推演
 **定义：形式推演**
-设$\Game$是一些公式组成的集合。称公式序列$A_1, A_2, ..., A_n$是从$\Game$中的公式出发的*形式推演*，如果对任意$i$，$1\leq i \geq n$，都有下列之一成立：
+设$\Gamma$是一些公式组成的集合。称公式序列$A_1, A_2, ..., A_n$是从$\Gamma$中的公式出发的*形式推演*，如果对任意$i$，$1\leq i \geq n$，都有下列之一成立：
   1. $A_i\in \Gamma$ ，或
   2. $A_i$ 是公理，或
   3. 存在$j_1, j_2 < i$使得$A_i$是$A_{j_1}$和$A_{j_2}$关于分离规则的直接后承。
@@ -73,15 +73,41 @@ ${\to，\neg}$ 是一个连接符的完备集。公理是有效的命题形式�
 如果存在从$\Gamma$中的公式出发的形式推演使得$A$是该推演的最后一个公式，则称$A$可由$\Gamma$推出，记作$\Gamma\vdash A$
 引理：设$\Gamma, \Delta$为公式的集合，$A, B$为公式，则
   1. $A\vdash A$
-  2. 若$\Delta\vdash A$且$\Delta\in\Game$，则$\Game\vdash A$
-  3. 若$\Delta\vdash B$且$\Game, B\vdash A$，则$\Game, \Delta\vdash A$
+  2. 若$\Delta\vdash A$且$\Delta\in\Gamma$，则$\Gamma\vdash A$
+  3. 若$\Delta\vdash B$且$\Gamma, B\vdash A$，则$\Gamma, \Delta\vdash A$
 
+### 斜式推演
 ### 推演定理
-定义 推演定理：若$\Game, A\vdash B$，则$\Game\vdash(A\to B)$
+定义 推演定理：若$\Gamma, A\vdash B$，则$\Gamma\vdash(A\to B)$
 
 ### 导出规则及辅助推演规则
+定理 导出规则及辅助推演规则：设 A，B，C 为公式，$\Gamma$为一集公式。
+  - 蕴含引入规则（$\to +$）：若$\Gamma, A\vdash B$，则$\Gamma\vdash A\to B$
+  - 蕴含消去规则（$\to -$）：$A, A\to B\vdash B$
+  - 合取引入规则（$\land +$）：$A, B\vdash A\land B$
+  - 合取消去规则（$\land -$）：$A\land B\vdash A, A\land B\vdash B$
+  - 析取引入规则（$\lor +$）：$A\vdash A\lor B, B\vdash A\lor B$
+  - 析取消去规则（$\lor -$）：若$\Gamma, A\vdash C$且$\Gamma, B\vdash C$，则$\Gamma, A\lor B\vdash C$
+  - 否定引入规则（归谬法）（$\neg +$）：若$\Gamma, A\vdash B$且$\Gamma, A\vdash \neg B$，则$\Gamma\vdash \neg A$
+  - 否定消去规则（$\neg -$）：$\neg\neg A\vdash A$
+  - 反证法：若$\Gamma, \neg A\vdash B$且$\Gamma, \neg A\vdash\neg B$，则$\Gamma\vdash A$
 
+### 可靠性定理
+引理：命题演算中的每一公理都是永真的
+**可靠性定理**：命题演算中的形式定理都是永真的（$\Gamma \vdash A \to \Gamma \models A$）
+定义（协调）：设$\Sigma$为若干公式组成的集合，若存在公式$A$使得$\Sigma\vdash A$且$\Sigma\vdash\neg A$，则称$\Sigma$是不协调的；否则，称$\Sigma$是协调的。
+引理：$\emptyset$是协调的。即命题演算是协调的
+引理：设$\Gamma$为若干公式的集合，则$\Gamma$协调当且仅当存在公式$A$使得$\Gamma\not\vdash A$。
+引理：设$\Sigma$为若干公式组成的集合，$A$为一个公式。若$\Sigma\not\vdash A$，则$\Sigma\cup\{\neg A\}$是协调的。
+引理：设$\Gamma$为若干公式的集合，若$\Gamma$是可满足的，则$\Gamma$协调。
+\**协调性是一个语法概念，可满足性是一个语义概念*
 
+### 范式与完全性定理
+定义：文字、范式
+  1. 原子命题符及其否定统称为**文字**（正文字，否定：负文字）。设$p$为一原子命题符，称$p$和$\neg p$为一对互补文字。
+  2. 有穷多个文字的析取称为**析取子句**，有穷多个文字的合取称为**合取子句**。（可为一个）
+  3. 有穷多个析取子句的合取称为**合取范式**
+  4. 有穷多个合取子句的析取称为**析取范式**
 ## 谓词演算
 
 ## 可计算性理论
