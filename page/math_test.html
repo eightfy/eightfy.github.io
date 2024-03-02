@@ -7,6 +7,13 @@
         <!-- 引入 MathJax 以呈现数学公式 -->
         <script>window.MathJax = 
         { 
+          startup: {
+    pageReady: () => {
+      return MathJax.startup.defaultPageReady().then(() => {
+        console.log('MathJax initial typesetting complete');
+      });
+    }
+  },
           tex: { 
           inlineMath: [['$', '$'], ['\\(', '\\)']], 
           displayMath: [['$$', '$$']], 
@@ -15,6 +22,21 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!--mathjax-->
+    <!--blacker: 1 below means font weight.-->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+         tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]], processEscapes: true }, 
+          TeX: { equationNumbers: { autoNumber: "AMS" } }, 
+          messageStyle: "none", 
+          SVG: { blacker: 1 }});
+  </script>
+  <script src="https://www.zybuluo.com/static/editor/libs/mathJax.js"></script>
+  <!--mathjax source code is here: https://github.com/mathjax/MathJax.-->
+  <script src="https://www.zybuluo.com/static/MathJax/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+
+
         <!-- 引入 marked.js 和 markdown-it -->
         <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>

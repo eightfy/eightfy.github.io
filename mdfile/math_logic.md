@@ -167,7 +167,10 @@ $\Sigma_A = \{B|$存在公式$A_1, ..., A_n$使得$B$为$A[p_1/A_1, ..., p_n/A_n
 
 变元符集合$\{x_1, ..., x_n, ...\}$记作 Var
 **指派**定义：从 Var 到论域 M 的映射$\sigma$为 M 中的指派。
-$\sigma(y|b)(x)=\$
+$\sigma(y|b)(x)=\begin{cases}
+\sigma(x),x\not = y \\
+b,x = y
+\end{cases}$
 ## 可计算性理论
 
 ## 哥德尔不完全性定理
