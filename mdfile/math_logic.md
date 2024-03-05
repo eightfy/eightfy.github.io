@@ -173,8 +173,11 @@ b,x = y
 **项的取值**定义：设$\mathcal{M}=(M, I)$是$\mathcal{L}$-结构，t为$\mathcal{L}$-项，$\sigma$是 M 中的一个指派。归纳定义项 t 在指派$\sigma$下在$\mathcal{M}$中的值，记作$t^{M, \sigma}$
   1. 若 t 是变元符 x，$t^{M, \sigma}$定义为$\sigma(x)$
   2. 若 t 是常项符 c，$t^{M, \sigma}$定义为$c^M$，是 c 在（M， I）中的解释 I(c)
-  3. 若 t 是$f(t_1, ..., t_m)$，$t^{M, \sigma}$定义为$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$，其中$f^M$是 f 在（M，I）中的解释 I(f)
+  3. 若 t 是$f(t_1, ..., t_m)$，$t^{M, \sigma}$定义为
+$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$，其中$f^M$是 f 在（M，I）中的解释 I(f)
+
 引理：设$\mathcal{M}$是$\mathcal{L}$-结构，t为$\mathcal{L}$-项，对 M 中的任意两个指派$\sigma_1, \sigma_2$，若对于 t 中的每一变元都有$\sigma_1(x)=\sigma_2(x)$，则$t^{M, \sigma_1}=t^{M, \sigma_2}$(归纳证明)
+
 **满足关系**定义：
 设$\mathcal{M}=(M, I)$是$\mathcal{L}$-结构，A 为一公式，$\sigma$为一指派，归纳定义在$\sigma$下$\mathcal{M}$满足公式 A（$\mathcal{M}\models_\sigma A$，在指派$\sigma$下 A 在$\mathcal{M}$中成立）的概念如下：
   1. 若 A 是$t_1\approx t_2$，则$\mathcal{M}\models_\sigma A$当且仅当$t_1^{M, \sigma}=t_2^{M, \sigma}$
