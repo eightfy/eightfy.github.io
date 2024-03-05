@@ -119,7 +119,7 @@ ${\to，\neg}$ 是一个连接符的完备集。公理是有效的命题形式�
 **完全性定理 3**：设$\Gamma$为一集公式。$\Gamma$协调当且仅当$\Gamma$可满足。
 \**由弱完全性证明强完全性时需要紧致性定理*
 定理：设$A$为命题公式，其中原子命题符为$p_1, ..., p_n$，令
-$$\Sigma_A = \{B|存在公式A_1, ..., A_n使得B为A[p_1/A_1, ..., p_n/A_n]\}$$
+$$\Sigma_A = \{B|exist A_1, ..., A_n make B to A[p_1/A_1, ..., p_n/A_n]\}$$
 假设$A$不是形式定理，则$\Sigma_A$是不协调的。
 \**该定理指的是若 A 不是重言式，那么把 A 作为公理模式加入命题演算中会破坏协调性*
 **联结词完全性**：任何一个布尔函数都可表示为一个命题公式。
@@ -176,8 +176,7 @@ b,x = y
   1. 若 t 是变元符 x，$t^{M, \sigma}$定义为$\sigma(x)$
   2. 若 t 是常项符 c，$t^{M, \sigma}$定义为$c^M$，是 c 在（M， I）中的解释 I(c)
   3. 若 t 是$f(t_1, ..., t_m)$，$t^{M, \sigma}$定义为
-$$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$$
-，其中$f^M$是 f 在（M，I）中的解释 I(f)
+$$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$$其中$f^M$是 f 在（M，I）中的解释 I(f)
 
 引理：设$\mathcal{M}$是$\mathcal{L}$-结构，t为$\mathcal{L}$-项，对 M 中的任意两个指派$\sigma_1, \sigma_2$，若对于 t 中的每一变元都有$\sigma_1(x)=\sigma_2(x)$，则$t^{M, \sigma_1}=t^{M, \sigma_2}$(归纳证明)
 
@@ -200,7 +199,8 @@ $$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$$
 设$\mathcal{M}$是$\mathcal{L}$-结构，A为$\mathcal{L}$-公式。若对任意指派$\sigma$都有$\mathcal{M}\models_\sigma A$，则称$\mathcal{M}$是 A 的模型，亦称 A 在$\mathcal{M}$中成立、A 在$\mathcal{M}$为真，记作$\mathcal{M}\models A$
 **永真公式**定义：
 设A为$\mathcal{L}$-公式，若 A 在每个$\mathcal{L}$-结构中都成立，则称 A 为永真公式。A 为语句时也称永真语句。
-
+**语义后承**定义：
+ 
 ## 可计算性理论
 
 ## 哥德尔不完全性定理
