@@ -176,7 +176,8 @@ b,x = y
   1. 若 t 是变元符 x，$t^{M, \sigma}$定义为$\sigma(x)$
   2. 若 t 是常项符 c，$t^{M, \sigma}$定义为$c^M$，是 c 在（M， I）中的解释 I(c)
   3. 若 t 是$f(t_1, ..., t_m)$，$t^{M, \sigma}$定义为
-$$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$$其中$f^M$是 f 在（M，I）中的解释 I(f)
+$$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$$
+其中$f^M$是 f 在（M，I）中的解释 I(f)
 
 引理：设$\mathcal{M}$是$\mathcal{L}$-结构，t为$\mathcal{L}$-项，对 M 中的任意两个指派$\sigma_1, \sigma_2$，若对于 t 中的每一变元都有$\sigma_1(x)=\sigma_2(x)$，则$t^{M, \sigma_1}=t^{M, \sigma_2}$(归纳证明)
 
@@ -196,11 +197,50 @@ $$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$$其中$f^M$是 f 在（M，I）中
 **可满足性**定义：
 称$\mathcal{L}$-公式 A 是可满足的，若存在$\mathcal{L}$-结构$\mathcal{M}$及 M 中的指派$\sigma$使得$\mathcal{M}\models_\sigma A$。
 **模型**定义：
-设$\mathcal{M}$是$\mathcal{L}$-结构，A为$\mathcal{L}$-公式。若对任意指派$\sigma$都有$\mathcal{M}\models_\sigma A$，则称$\mathcal{M}$是 A 的模型，亦称 A 在$\mathcal{M}$中成立、A 在$\mathcal{M}$为真，记作$\mathcal{M}\models A$
+- 设$\mathcal{M}$是$\mathcal{L}$-结构，A为$\mathcal{L}$-公式。若对任意指派$\sigma$都有$\mathcal{M}\models_\sigma A$，则称$\mathcal{M}$是 A 的模型，亦称 A 在$\mathcal{M}$中成立、A 在$\mathcal{M}$为真，记作$\mathcal{M}\models A$
+- 设$\Sigma$为一阶语言$\mathcal{L}$中的若干公式组成的集合，$\mathcal{M}$为$\mathcal{L}$-结构。若对每个公式$A\in\Sigma$都有$\mathcal{M}\models A$，则称$\mathcal{M}$为$\Sigma$的模型
 **永真公式**定义：
 设A为$\mathcal{L}$-公式，若 A 在每个$\mathcal{L}$-结构中都成立，则称 A 为永真公式。A 为语句时也称永真语句。
 **语义后承**定义：
- 
+设$\Sigma$为一阶语言$\mathcal{L}$中的若干公式组成的集合，A 为$\mathcal{L}$-公式。若$\Sigma$的每一模型也都是 A 的模型，则称 A 是$\Sigma$的语义后承，记作$\Sigma\models A$
+
+\**对于命题演算，有$\models A\to B$当且仅当$A\models B$。但谓词演算中不成立。$A(x)\models \forall xA(x)$不能推出$\models A(x)\to\forall xA(x)$*
+
+### 谓词演算的公理系统及推理规则
+谓词演算的公理系统包括三组公理模式：
+  1. 命题演算的公理
+  2. 量词公理
+     - $\forall xA(x)\to A(t)$(项t对A(x)中的x是自由的)
+     - $\forall x(A\to B)\to(A\to\forall xB)$(x不在A中自由出现)
+     - （$A(t)\to\exists xA(x)$）
+  3. 等词公理
+
+谓词演算的推理规则：设 A，B，C 为公式，C 中不含 x 的自由出现。
+分离规则 MP：$\frac{A, A\to B}{B}$
+全称量词规则（概括规则） CGen：$\frac{C\to A(x)}{C\to\forall xA(x)}$
+存在量词规则 PEx：$\frac{A(x)\to C}{\exists xA(x)\to C}$
+
+**形式证明**定义：
+称公式的有穷序列$A_1, A_2, ..., A_n$是一个*形式证明*，如果对任意$i$，$1\leq i \geq n$，都有下列之一成立：
+  1. $A_i$ 是公理，或
+  2. 存在$j_1, j_2 < i$使得$A_i$是$A_{j_1}$和$A_{j_2}$关于分离规则的直接后承，或
+  3. 存在$j < i$使得$A_i$是$A_j$关于规则CGen的直接后承，或
+  4. 存在$j < i$使得$A_i$是$A_j$关于规则PEx的直接后承。
+
+形式定理定义同命题演算。
+**形式推演**定义：
+设$\Gamma$是一些公式组成的集合。称公式序列$A_1, A_2, ..., A_n$是从$\Gamma$中的公式出发的*形式推演*，如果对任意$i$，$1\leq i \geq n$，都有下列之一成立：
+  1. $A_i\in \Gamma$ ，或
+  2. $A_i$ 是公理，或
+  3. 存在$j_1, j_2 < i$使得$A_i$是$A_{j_1}$和$A_{j_2}$关于分离规则的直接后承，或
+  4. 存在$j < i$使得$A_i$是$A_j$关于规则CGen的直接后承，或
+  5. 存在$j < i$使得$A_i$是$A_j$关于规则PEx的直接后承。
+
+如果存在从$\Gamma$中的公式出发的形式推演使得$A$是该推演的最后一个公式，则称$A$可由$\Gamma$推出，记作$\Gamma\vdash A$
+引理：$A(x)\vdash\forall xA(x)$
+
+### 谓词演算的可靠性定理
+
 ## 可计算性理论
 
 ## 哥德尔不完全性定理
