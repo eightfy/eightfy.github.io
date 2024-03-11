@@ -264,6 +264,21 @@ $$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$$
 推论：若$\Gamma, A\vdash B$且 A 是语句，那么$\Gamma\vdash A\to B$
 
 ### 谓词演算的推演规则
+（同命题演算）引理：设$\Gamma, \Delta$为公式的集合，$A, B$为公式，则
+  1. $A\vdash A$
+  2. 若$\Delta\vdash A$且$\Delta\in\Gamma$，则$\Gamma\vdash A$
+  3. 若$\Delta\vdash B$且$\Gamma, B\vdash A$，则$\Gamma, \Delta\vdash A$
+
+定理 （修正后的）导出规则及辅助推演规则：设 A，B，C 为公式，$\Gamma$为一集公式。
+  - 蕴含引入规则（$\to +$）：若$\Gamma, A\vdash B$，且在该推演中所有自由变元对 A 而言固定，则$\Gamma\vdash A\to B$
+  - 蕴含消去规则（$\to -$）：$A, A\to B\vdash B$
+  - 合取引入规则（$\land +$）：$A, B\vdash A\land B$
+  - 合取消去规则（$\land -$）：$A\land B\vdash A, A\land B\vdash B$
+  - 析取引入规则（$\lor +$）：$A\vdash A\lor B, B\vdash A\lor B$
+  - 析取消去规则（$\lor -$）：若$\Gamma, A\vdash C$且$\Gamma, B\vdash C$，且这两个推演中的所有自由变元分别对 A，B而言固定，则$\Gamma, A\lor B\vdash C$
+  - 否定引入规则（归谬法）（$\neg +$）：若$\Gamma, A\vdash B$且$\Gamma, A\vdash \neg B$，且这两个推演中的所有自由变元对 A 而言固定，则$\Gamma\vdash \neg A$
+  - 否定消去规则（$\neg -$）：$\neg\neg A\vdash A$
+  - 反证法：若$\Gamma, \neg A\vdash B$且$\Gamma, \neg A\vdash\neg B$，则$\Gamma\vdash A$
 
 ## 可计算性理论
 
