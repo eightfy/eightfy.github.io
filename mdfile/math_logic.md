@@ -279,6 +279,23 @@ $$f^M(t^{M, \sigma}_1, ..., t^{M, \sigma}_m)$$
   - 否定引入规则（归谬法）（$\neg +$）：若$\Gamma, A\vdash B$且$\Gamma, A\vdash \neg B$，且这两个推演中的所有自由变元对 A 而言固定，则$\Gamma\vdash \neg A$
   - 否定消去规则（$\neg -$）：$\neg\neg A\vdash A$
   - 反证法：若$\Gamma, \neg A\vdash B$且$\Gamma, \neg A\vdash\neg B$，则$\Gamma\vdash A$
+  - 全称引入规则（$\forall +$）：$A(X)\vdash\forall xA(x)$
+  - 全称消去规则（$\forall -$）：$\forall xA(x)\vadsh A(t)$
+  - 存在引入规则（$\exists +$）：$A(t)\vdash\exists xA(x)$
+  - 存在消去规则（$\exists -$）：如果$\Gamma, A(x)\vadsh C$且所有自由变元对$A(x)$都是固定的，则$\Gamma, \exists xA(x)\vadsh C$
+
+### 具有特殊句法结构的公式
+
+### 完全性定理与紧致性定理
+定义（协调）：设$\Sigma$为$\mathcal{L}$中的若干语句组成的集合，若存在公式$A$使得$\Sigma\vdash A$且$\Sigma\vdash\neg A$，则称$\Sigma$是不协调的；否则，称$\Sigma$是协调的。
+定义（模型）：设$\Sigma$为一阶语言$\mathcal{L}$中的若干公式组成的集合，$\mathcal{M}$为$\mathcal{L}$-结构。若对每个公式$A\in\Sigma$都有$\mathcal{M}\models A$，则称$\mathcal{M}$为$\Sigma$的模型。
+如果$\Sigma$有模型，则称$\Sigma$是可满足的。
+**完全性定理**定义：设$\Sigma$为$\mathcal{L}$中的若干语句组成的集合。如果$\Sigma$是协调的，则$\Sigma$有模型。
+**紧致性定理**定义：设$\Sigma$为$\mathcal{L}$中的若干语句组成的集合。则$\Sigma$有模型当且仅当$\Sigma$的每个有穷子集都有模型。
+\**紧致性定理是模型论中重要的定理，以下是应用之一*
+定理：设$\mathcal{L}$为一阶语言，T 为$\mathcal{L}$的若干语句组成的集合。设对任意$n\geq 1$，都存在 T 的至少含有 n 个元素的模型，则必存在 T 的无穷模型（既含有无数多个元素的模型）。（P128）
+推论：对任意一阶语言$\mathcal{L}$，都不存在$\mathcal{L}$的语句集 T 使得对任意 $\mathcal{L}$-结构$\mathcal{M}$都有，$\mathcal{M}\models T$当且仅当$\mathcal{M}$有穷。
+
 
 ## 可计算性理论
 
